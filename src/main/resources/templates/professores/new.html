@@ -16,13 +16,13 @@
             <form th:object="${requisicaoNovoProfessor}" action="/professores" method="POST">
                 <div class="mb-3">
                     <label class="form-label">Nome</label>
-                    <input type="text" class="form-control" th:field="*{nome}">
-                    <div class="invalid-feedback"></div>
+                    <input type="text" class="form-control" th:field="*{nome}" th:errorclass="is-invalid">
+                    <div class="invalid-feedback" th:errors="*{nome}"></div>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Salário</label>
-                    <input type="text" class="form-control" th:field="*{salario}">
-                    <div class="invalid-feedback"></div>
+                    <input type="text" class="form-control" th:field="*{salario}" th:errorclass="is-invalid">
+                    <div class="invalid-feedback" th:errors="*{salario}"></div>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Status</label>
