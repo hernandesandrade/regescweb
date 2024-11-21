@@ -15,7 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 @Controller
-public class ProfessorControle {
+public class ProfessorController {
 
     @Autowired
     ProfessorRepository professorRepository;
