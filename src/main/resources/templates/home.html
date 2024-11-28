@@ -5,14 +5,14 @@
 
 <body>
 
+<header th:replace="~{fragmentos :: header('Sistema Registros Escolares')}"></header>
+
 <main>
     <div class="container mt-4">
-        <div class="row">
-            <h1>Home</h1>
-        </div>
         <div class="list-group">
             <button type="button" class="list-group-item list-group-item-action"
-                    th:onclick="'window.location.href=\'/professores\''">Professores</button>
+                    th:onclick="'window.location.href=\'/professores\''">Professores
+            </button>
             <button type="button" class="list-group-item list-group-item-action">Alunos</button>
         </div>
     </div>
