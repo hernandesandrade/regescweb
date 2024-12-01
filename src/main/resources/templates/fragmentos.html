@@ -11,7 +11,7 @@
         <a aria-current="page" class="nav-link" href="/" th:classappend="${currentUri.equals('/') ? 'active':''}">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/professores" th:classappend="${currentUri.equals('/professores') ? 'active':''}">Professores</a>
+        <a class="nav-link" href="/professores" th:classappend="${currentUri.startsWith('/professores') ? 'active':''}">Professores</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/alunos" th:classappend="${currentUri.equals('/alunos') ? 'active':''}">Alunos</a>
