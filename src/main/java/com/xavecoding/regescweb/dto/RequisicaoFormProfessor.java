@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 import java.math.BigDecimal;
 
 @Repository
-public class RequisicaoNovoProfessor {
+public class RequisicaoFormProfessor {
 
     @NotNull
     @NotBlank
@@ -23,6 +23,12 @@ public class RequisicaoNovoProfessor {
     @NotNull
     @Enumerated(EnumType.STRING)
     private StatusProfessor statusProfessor;
+
+    public void fromProfessor(Professor professor){
+        this.nome = professor.getNome();
+        this.salario = professor.getSalario();
+        this.statusProfessor = professor.getStatusProfessor();
+    }
 
     public String getNome() {
         return nome;
